@@ -162,6 +162,7 @@
                         facingMode: { exact: "environment" } // 'environment' specifies the rear camera
                     }
                 });
+                console.log("Requesting rear camera");
                 video.srcObject = stream;
             } catch (error) {
                 console.error('Error accessing camera:', error);
