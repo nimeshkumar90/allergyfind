@@ -47,7 +47,7 @@
             <canvas id="canvas" style="display:none;"></canvas>
             <!-- Image tag to display the captured photo -->
             <img id="capturedImage" alt="Captured Image" class="img-fluid"/>
-            <section class="ingredients container mb-4">
+            <section class="ingredients container mb-4" id="show_ocr">
 
             </section>
             <a href="#" class="camera_btn d-flex align-items-center justify-content-center m-auto mb-auto" id="captureBtn">
@@ -173,6 +173,8 @@
             // Perform OCR using the hardcoded languages
                 const text = await performOCR(imageData);
                 //resultElement.textContent = `Recognized Text: ${text}`;
+                const resultElement = document.getElementById('show_ocr');
+                resultElement.textContent = `Recognized Text: ${text}`;
                 console.log(`Recognized Text: ${text}`);
             } catch (error) {
                 resultElement.textContent = error.message;
