@@ -1,0 +1,35 @@
+<div id="output"></div>
+
+<script>
+    //const apiKey = "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"; // Replace with your OpenAI API key
+    const apiKey="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";
+    const endpoint = "https://api.openai.com/v1/chat/completions";
+    let prompt=`कि ATI X rr 755 Late HT rF mg AR "W \ i Esa | SAAD 9 ] Otal ci KS ¥ JULES 4 व ‘al \ - { min, Chl ay HY | Ry 9 a है» है Any 108 Fant. 0k, Blac Uk — : f Nutmeg Inge iy Ld mol & A | : omy TATION FORIATOL J . | ) = Ifaserveis 100 | 1 bY hod food, Good If NUTRITICN® Per ba | \ | 01616 \ | IC जी i INFORMATION Mg 4 | | गा | XNOW YOUR PORTION] Energy (keal 384 1269 | 3 : po ; we Bhs AN EN « हे | एक 3 रा ~~ Packcontains serve Fe p=10g. | Puen) 82131 il EF 1 Per serve contribution to 1: 13% Carbohydrate g) |596 |&L1 0A . ' 1 = | exergy,» oaded sugar 13% total | Total Sugars (9) 8113] 1A 5 लक § fat 26% saturated fat, SY trans fat | Added Sugars 13 {1 - 4 ana 30 10 sodium दि TR 7588 | 13% Fo stant Noodles with Seasonng® | ded Ft (metal 82. 37 | 94 - INGREDIENTS ad RN | Trans Fat (9) notmorethn) | 013 00%) - f Noodles: Refined wheat i Sodium (mg 03108 30% aim oil. lodized salt, Whee! शशि, | हि EL - hickeners (508 & 412), Acdity`;
+    const data = {
+    model: "gpt-4o", // or "gpt-4" if available
+    //model:"gpt-3.5-turbo",
+    messages: [
+        { role: "system", content: "you have to extract the complete ingredients from the following text along with their quantity and response in json format like {item 1:quantity1, item 2:quantity 2}. if you are not able to find quantity then specify not specified. if the spelling of any ingredient is incomplete then complete it and add in json. keep the result consistent" },
+        { role: "user", content:  prompt}
+    ],
+    max_tokens: 500,
+    };
+
+    fetch(endpoint, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`
+    },
+    body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("AI Response:", data.choices[0].message.content);
+        document.getElementById("output").textContent = data.choices[0].message.content;
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+
+</script>

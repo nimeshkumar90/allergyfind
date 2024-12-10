@@ -1,0 +1,131 @@
+:root {
+    --background-light: #f5f5f7;
+    --text-light: #333333;
+    --background-dark: #1c1c1e;
+    --text-dark: #ffffff;
+    --toggle-light: #A6AEBF;
+    --toggle-dark: #1D24CA;
+}
+*{
+    font-family: "Host Grotesk", sans-serif;
+}
+body{
+    background-color: #F6F5F2;
+}
+.navbar{
+    justify-content:center;
+}
+.navbar-bg{
+    background-color: #F4F6FF!important;
+}
+.all_buttons{
+    z-index:10000;
+    position:absolute;
+    bottom:-10%;
+}
+button{
+    text-decoration:none!important;
+    font-size: 1.1em;
+}
+button{
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.active-link{
+    color: #1D24CA!important;
+}
+.profile_picture{
+    height: 70px;
+    border-radius: 50%;
+}
+.top-menu{
+    background-color: #F4F6FF!important;
+    position: fixed;
+    width: 100%!important;
+    top:0px!important;
+    z-index: 10000;
+}
+.fw-bold{
+    font-weight: 600!important;
+}
+.blog{
+    position: relative;
+}
+.top-blog{
+    border-radius: 10px;
+    border-radius: 20px;
+}
+.bg-purple{
+    background-color:#AD49E1!important;
+}
+.search-content{
+    border-radius: 20px;
+    background-color: #EBD3F8!important;
+}
+.scan-content{
+    background-color: #C9E6F0!important;   
+    border-radius: 20px;
+}
+.bg-light-purple{
+    background-color: #F29379!important;
+}
+a{
+    text-decoration: none!important;
+}
+.h-search-form{
+    position: relative;
+    padding: 100px;
+    background: skyblue;
+   text-align:center;
+ }
+ .h-search-form input{
+    width: 70%;
+    padding: 0 30px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    position: relative;
+    color: #333;
+    height: 70px;
+ }
+ .h-search-form button{
+    position: relative;
+    right: 110px;
+    height: 60px;
+    color: #fff;
+    background: blue;
+    top: px;
+    border-radius: 50px;
+    border: none;
+    width: 100px;
+ }
+ .h-search-form button:hover{
+    background: darkblue;
+ }
+ .scan_container{
+    height: 80vh;
+    width: 100%;
+ }
+ .camera_btn{
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: #1D24CA!important;
+    color: #fff!important;
+    border-radius: 50%;
+ }
+ .color-grey{
+    color: #ECEBDE!important;
+ }
+ .color-img{
+    font-size: 200px!important;
+ }
+ .ingredients{
+    height: 200px;
+    background-color: #ECEBDE;
+    border-radius: 20px;
+ }
