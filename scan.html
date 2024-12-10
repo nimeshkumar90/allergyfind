@@ -155,9 +155,9 @@
                 // Request camera access
                 video.style.display='block';
                 capturedImage.style.display='none';
-                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                //stream = await navigator.mediaDevices.getUserMedia({ video: true });
                 // Request the rear camera
-                const stream = await navigator.mediaDevices.getUserMedia({
+                stream = await navigator.mediaDevices.getUserMedia({
                     video: {
                         facingMode: { exact: "environment" } // 'environment' specifies the rear camera
                     }
